@@ -6,6 +6,14 @@
 
 ## 快捷键大全
 
+`super+w` 浏览器
+
+`super + shift + enter` 终端
+
+`super + e` 文件管理器
+
+`super + shift + d` 应用启动器
+
 
 ## 修改内容
 
