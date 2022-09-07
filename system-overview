@@ -1,11 +1,11 @@
---[[
-#=====================================================================================
+--[[ #=====================================================================================
 #                               ArcoLinuxD
 #
 # Author  : Erik Dubois at http://www.erikdubois.be
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation : http://erikdubois.be/category/linux/aureola/
 #======================================================================================
+# alignr表示空格，hr表示分割线，剩下的照猫画虎即可
 
 
 ]]
@@ -150,4 +150,3 @@ ${color1}[S]+x${alignr}${color2}Exit${color}
 ${color1}${hr}${color}
 ${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];
-# alignr表示空格，hr表示分割线，剩下的照猫画虎即可
