@@ -134,9 +134,9 @@ ${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
 ${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
 ${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
 ${color1}${hr}${color}
-${color1}[S]+Enter${alignr}${color2}Terminal${color}
-${color1}[S]+[Shift]+Enter${alignr}${color2}File Manager${color}
-${color1}[Ctrl]+[Alt]+V${alignr}${color2}Vivaldi${color}
+${color1}[S]+E${alignr}${color2}File Manager${color}
+${color1}[S]+[Shift]+Enter${alignr}${color2}Terminal${color}
+${color1}[S]+[w]${alignr}${color2}Brave${color}
 ${color1}[S]+F2${alignr}${color2}Editor${color}
 ${color1}[S]+F6${alignr}${color2}Media Player${color}
 ${color1}[S]+[Space]${alignr}${color2}Change Layout${color}
@@ -150,3 +150,4 @@ ${color1}[S]+x${alignr}${color2}Exit${color}
 ${color1}${hr}${color}
 ${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];
+# alignr表示空格，hr表示分割线，剩下的照猫画虎即可

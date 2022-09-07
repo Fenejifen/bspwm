@@ -8,7 +8,7 @@
 
 # Vivaldi
 super + F1
-	vivaldi-stable
+	brave
 
 # Atom
 super + F2
@@ -59,12 +59,16 @@ super + F12
 #################################################################
 
 #Atom
+#super + e
+#    atom
+
+#File-Manager
 super + e
-    atom
+	thunar
 
 #Browser
 super + w
-    vivaldi-stable
+    brave
 
 #Conky-toggle
 super + c
@@ -104,16 +108,19 @@ super + Escape
 
 #Keyboard dependent
 #alacritty
-super + KP_Enter
-	alacritty
+#super + KP_Enter
+#	alacritty
 
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
 
 #File-Manager
+#super + shift + Return
+#	thunar
+
 super + shift + Return
-	thunar
+	alacritty
 
 #Keyboard dependent
 #File-Manager
@@ -121,8 +128,12 @@ super + shift + Return
 #	thunar
 
 #dmenu
+#super + shift + d
+#	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+#Rofi
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+    rofi -show drun
 
 #reload sxhkd:
 super + shift + s
