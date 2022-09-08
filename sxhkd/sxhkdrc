@@ -39,7 +39,6 @@ super + x
 super + t
     alacritty
 
-#alacritty
 super + Return
     alacritty
 
@@ -176,13 +175,10 @@ ctrl + alt + o
 # SUPER + KEYS
 #################################################################
 
-#Toggle fullscreen of window
-super + f
-	bspc node --state \~fullscreen
 
-# Toggle pseudo tiling of window
+# 浮动模式
 super + p
-	bspc node --state \~pseudo_tiled
+	bspc node --state \~floating
 
 #kill
 super + q
@@ -202,7 +198,7 @@ super + bracket{left,right}
 
 # set the window state
 super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,floating,fullscreen}
 
 # Move focus to other monitor
 super + BackSpace
@@ -213,8 +209,11 @@ super + BackSpace
 #################################################################
 
 # Move floating window
-super + alt + {_,shift + }{Left,Down,Up,Right}
-	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+# super + alt + {_,shift + }{Left,Down,Up,Right}
+# TODO:编写python脚本
+# 	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+super + alt + h
+    sh ~/.config/bspwm/scripts/move-window-left
 
 #################################################################
 # SUPER + CONTROL KEYS
