@@ -208,12 +208,9 @@ super + BackSpace
 # SUPER + ALT KEYS
 #################################################################
 
-# Move floating window
-# super + alt + {_,shift + }{Left,Down,Up,Right}
-# TODO:编写python脚本
-# 	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
-super + alt + h
-    sh ~/.config/bspwm/scripts/move-window-left
+# 移动窗口，按shift为将浮动窗口送到边缘
+super + alt + {_,shift + }{Left,Down,Up,Right,h,j,k,l}
+ 	python ~/.config/bspwm/scripts/move-window-py.py {_,edge-}{west,south,north,east,west,south,north,east}
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -314,7 +311,7 @@ alt + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 #################################################################
-# 改变专注位置
+# 改变专注位置TODO:疑似存在冗余
 #################################################################
 
 # Focus next/previous window
