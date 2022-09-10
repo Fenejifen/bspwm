@@ -7,7 +7,7 @@
   - [这是什么](#这是什么)
   - [各文件内容说明](#各文件内容说明)
   - [快捷键大全](#快捷键大全)
-  - [安装依赖](#安装依赖)
+  - [额外安装](#额外安装)
 
 <!-- /code_chunk_output -->
 ## 这是什么
@@ -16,23 +16,23 @@
 
 ## 各文件内容说明
 
-.
-├── autostart.sh                  |启动bspwm时启动的任务
-├── bspwmrc                       |bspwm配置文件，随bspwm一起启动和autostart其实一样
-├── picom.conf
-├── readme.md                     |readme文件
-├── scripts
-│   ├── adjust-new-window
-│   ├── external_rules_command
-│   ├── move-window               |移动浮窗脚本
-│   ├── move-window-py.py         |移动任何窗口脚本
-│   ├── picom-toggle.sh
-│   └── pseudo_automatic_mode
-├── sxhkd
-│   ├── sxhkdrc                   |快捷键配置
-│   └── sxhkdrc-azerty
-├── system-overview               |cronky配置
-└── wall.png
+. </br>
+├── autostart.sh                  |启动bspwm时启动的任务 </br>
+├── bspwmrc                       |bspwm配置文件，随bspwm一起启动和autostart其实一样 </br>
+├── picom.conf </br>
+├── readme.md                     |readme文件 </br>
+├── scripts </br>
+│   ├── adjust-new-window </br>
+│   ├── external_rules_command </br>
+│   ├── move-window               |移动浮窗脚本 </br>
+│   ├── move-window-py.py         |移动任何窗口脚本 </br>
+│   ├── picom-toggle.sh </br>
+│   └── pseudo_automatic_mode </br>
+├── sxhkd </br>
+│   ├── sxhkdrc                   |快捷键配置 </br>
+│   └── sxhkdrc-azerty </br>
+├── system-overview               |cronky配置 </br>
+└── wall.png </br>
 
 ## 快捷键大全
 
@@ -62,7 +62,7 @@
 
 `super + []` 放大缩小窗口，和按住super然后鼠标滚轮是一个效果
 
-## 安装依赖
+## 额外安装
 
 - flameshot
 
