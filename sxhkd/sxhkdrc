@@ -10,7 +10,6 @@
 #Rofi theme selector
 super + F10
     rofi-theme-selector
-
 #Rofi Fullscreen
 super + F11
     rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
@@ -31,18 +30,18 @@ super + e
 super + w
     brave
 
-#archlinux-logout
+# 注销关机重启等操作
 super + x
     archlinux-logout
 
-#Urxvt
+# 终端
 super + t
     alacritty
 
 super + Return
     alacritty
 
-#Xkill
+#Xkill,用来关窗口
 super + Escape
     xkill
 
@@ -51,6 +50,7 @@ super + Escape
 # SUPER + SHIFT KEYS
 #################################################################
 
+# 终端
 super + shift + Return
 	alacritty
 
@@ -58,7 +58,7 @@ super + shift + Return
 super + shift + d
     rofi -show drun
 
-#reload sxhkd:
+#重新加载按键配置
 super + shift + s
 	pkill -USR1 -x sxhkd
 
@@ -168,7 +168,7 @@ super + y
 #################################################################
 
 #Picom Toggle
-ctrl + alt + o
+super + ctrl + alt + o
     ~/.config/bspwm/scripts/picom-toggle.sh
 
 #################################################################
@@ -209,7 +209,7 @@ super + BackSpace
 #################################################################
 
 # 移动窗口，按shift为将浮动窗口送到边缘
-super + alt + {_,shift + }{Left,Down,Up,Right,h,j,k,l}
+super + shift + {_,alt + }{Left,Down,Up,Right,h,j,k,l}
  	python ~/.config/bspwm/scripts/move-window-py.py {_,edge-}{west,south,north,east,west,south,north,east}
 
 #################################################################
@@ -233,33 +233,30 @@ super + shift + r
 super + shift + q
 	bspc node -c
 
-#Logout
-#super + shift + x
-#	bspc quit
-
-# Focus/swap windows by direction
-super + {_,shift + }{h,j,k,l}
-	bspc node --{focus,swap} {west,south,north,east}
+# 改变当前选择窗口,按下alt可以交换
+super + {_,alt + }{h,j,k,l, Left, Down, Up, Right}
+	bspc node --{focus,swap} {west,south,north,east,west,south,north,east}
 
 # Flip layout vertically/horizontally
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
-# Move focused window to other monitor
-super + shift + Left
-	bspc node -m next --follow
+# 移动到其它显示器
+# # Move focused window to other monitor
+# super + shift + Left
+# 	bspc node -m next --follow
 
-# Move focused window to other monitor
-super + shift + Right
-		bspc node -m next --follow
+# # Move focused window to other monitor
+# super + shift + Right
+# 		bspc node -m next --follow
 
-# Move focused window to other monitor
-super + shift + Up
-	bspc node -m next --follow
+# # Move focused window to other monitor
+# super + shift + Up
+# 	bspc node -m next --follow
 
-# Move focused window to other monitor
-super + shift + Down
-		bspc node -m next --follow
+# # Move focused window to other monitor
+# super + shift + Down
+# 		bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -268,10 +265,6 @@ super + shift + Down
 # Focus/swap windows by direction
 super + ctrl + {Left,Down,Up,Right}
 	bspc node --{focus} {west,south,north,east}
-
-# Contract tiled space
-super + ctrl + {h,j,k,l}
-	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 # Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
@@ -310,33 +303,6 @@ alt + space
 alt + shift + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
-#################################################################
-# 改变专注位置TODO:疑似存在冗余
-#################################################################
-
-# Focus next/previous window
-super + Left
-	bspc node --focus west
-super + h
-	bspc node --focus west
-
-# Focus next/previous window
-super + Right
-	bspc node --focus east
-super + l
-	bspc node --focus east
-
-# Focus Up window
-super + Up
-	bspc node --focus north
-super + k
-	bspc node --focus north
-
-# Focus Down windows
-super + Down
-	bspc node --focus south
-super + j
-	bspc node --focus south
 
 #################################################################
 #################################################################
